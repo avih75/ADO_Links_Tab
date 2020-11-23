@@ -1,0 +1,92 @@
+{
+    "manifestVersion": 1,
+    "id": "Iframe-Hub",
+    "version": "1.0.83",
+    "name": "ADO Iframe Hubl",
+    "description": "Add Hub with Iframe",
+    "publisher": "AviHadad",
+    "icons": {
+        "default": "images/logo.png"
+    },
+    "targets": [{
+        "id": "Microsoft.VisualStudio.Services"
+    }],
+    "tags": [
+        "Links Tab"
+    ],
+    "content": {
+        "details": {
+            "path": "details.md"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/avih75/TFS_Action_Button"
+    },
+    "links": {
+        "support": {
+            "uri": "https://github.com/avih75/TFS_Action_Button/issues"
+        },
+        "learn": {
+            "uri": "https://github.com/avih75/TFS_Action_Button/blob/master/README.md"
+        },
+        "repository": {
+            "uri": "https://github.com/avih75/TFS_Action_Button"
+        },
+        "issues": {
+            "uri": "https://github.com/avih75/TFS_Action_Button/issues"
+        }
+    },
+    "categories": [
+        "Azure Boards"
+    ],
+    "contributions": [{
+            "id": "Links.Tab",
+            "type": "ms.vss-web.tab",
+            "description": "Adds a 'Iframe' tab to the Product and Iteration backlog tabs.",
+            "targets": [
+                "ms.vss-work-web.product-backlog-tabs"
+            ],
+            "properties": {
+                "name": "BI",
+                "uri": "linksTabIndex.html",
+                "registeredObjectId": "backlogTabObject",
+                "text": "Custom query action",
+                "title": "ms.vss-work-web.work-item-query-menu",
+                "icon": "images/logo.png"
+            }
+        },
+        {
+            "id": "Links.Tab.Configuration",
+            "type": "ms.vss-web.hub",
+            "description": "Adds a 'Links Tab' hub to the work Item configuration hub group.",
+            "targets": [
+                "ms.vss-web.collection-admin-hub-group"
+            ],
+            "properties": {
+                "name": "Links Tab",
+                "uri": "LinkTabConfig.html",
+                "order": 99
+            }
+        }
+    ],
+    "scopes": [
+        "vso.work"
+    ],
+    "files": [{
+            "path": "linksTabIndex.html",
+            "addressable": true
+        }, {
+            "path": "LinkTabConfig.html",
+            "addressable": true
+        },
+        {
+            "path": "scripts",
+            "addressable": true
+        },
+        {
+            "path": "images/logo.png",
+            "addressable": true
+        }
+    ]
+}

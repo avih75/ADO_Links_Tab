@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Hello World</title>
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="scripts/VSS.SDK.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        VSS.init({
+            moduleLoaderConfig: true,
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true,
+            applyTheme: true
+        });
+        VSS.require(["scripts/linkTabConfig"], function() {
+            VSS.notifyLoadSucceeded();
+        });
+    </script>
+    <h1>External Links</h1>
+    <div style="margin-left: 20px;">
+        <table id="table" style="width: 100%;">
+            <tr style="margin-top: 10px;margin-bottom: 10px;">
+                <th style="width: 5%;">Del</th>
+                <th style="width: 5%;"><button id="CancleDefault">Cancel</button></th>
+                <th style="width: 10%;">Name</th>
+                <th style="width: 80%;">Link</th>
+            </tr>
+        </table>
+        <br/>
+        <button id="AddButton">Save</button>
+        <label style="margin-left: 10px;">Title:</label>
+        <input id="Name" type="text" style="margin-left: 5px;"></input>
+        <label style="margin-left: 10px;">Url:</label>
+        <input id="Link" type="text" style="margin-left: 5px;"></input>
+    </div>
+
+</body>
+
+</html>
